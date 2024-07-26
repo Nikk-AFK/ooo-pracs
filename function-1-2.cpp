@@ -9,5 +9,5 @@ double array_mean(int array[], int n) {
         sum = sum + array[i];
     }
     double mean = (double)sum/n;
-    return sum;
+    return mean;
 }
