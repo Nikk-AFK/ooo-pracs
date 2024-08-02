@@ -1,8 +1,8 @@
 #include <iostream>
+#include <string>
 
-extern int min_element(int array[], int n);
+extern void print_binary_str(std::string decimal_number);
 
-int main() { 
-    int array[5] = {2, 4, 1, 19, 12};
-    std::cout << min_element(array, 5) << std::endl;
+int main() {
+    print_binary_str("2");
 }

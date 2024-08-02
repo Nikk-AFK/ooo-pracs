@@ -1,12 +1,13 @@
 #include <iostream>
 
-int array_sum(int array[], int n) {
+int sum_diagonal(int array[4][4]) {
     int sum = 0;
-    if (n < 1) {
-        return 0;
-    }
-    for (int i = 0; i < n; i++) {
-        sum = sum + array[i];
+    for (int i = 0; i < 4; i++) {
+        for (int j = 0; j < 4; j++) {
+            if (i == j) {
+                sum = sum + array[i][j];
+            }
+        }
     }
     return sum;
 }

@@ -1,8 +1,8 @@
 #include <iostream>
 
-extern int num_count(int array[], int n, int number);
+extern int count_digits(int array[4][4]);
 
 int main() {
-    int array[5] = {1, 3, 3, 3, 6};
-    std::cout << num_count(array, 5, 3) << std::endl;
+    int arr[4][4] = {{3, 0, 5, 9}, {4, 7, 2, 1}, {3, 2, 7, 4}, {5, 2, 1, 8}};
+    count_digits(arr);
 }

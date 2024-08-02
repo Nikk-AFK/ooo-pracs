@@ -1,8 +1,8 @@
 #include <iostream>
 
-extern int array_sum(int array[], int n);
+extern int sum_diagonal(int array[4][4]);
 
 int main() {
-    int array[3] = {1, 5, 4};
-    std::cout << array_sum(array, 3) << std::endl;
+    int arr[4][4] = {{3, 4, 5, 6}, {4, 3, 2, 1}, {3, 5, 7, 4}, {5, 2, 1, 6}};
+    std::cout << sum_diagonal(arr) << std::endl;
 }

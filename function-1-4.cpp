@@ -1,12 +1,11 @@
 #include <iostream>
 
-int sum_two_arrays(int array[], int secondarray[], int n) {
-    int sum_arr = 0;
-    if (n < 1) {
-        return 0;
+void print_scaled(int array[3][3],int scale) {
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            array[i][j] *= scale;
+            std::cout << array[i][j] << " ";
+        }
+        std::cout << "\n";
     }
-    for (int i = 0; i < n; i++) {
-        sum_arr = sum_arr + array[i] + secondarray[i];
-    }
-    return sum_arr;
 }

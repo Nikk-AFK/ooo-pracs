@@ -1,14 +1,12 @@
 #include <iostream>
+#include <string>
 
-int min_element(int array[], int n) {
-  if (n < 1) {
-    return 0;
-  }
-  int min = array[0];
-  for (int i = 1; i < n; i++) {
-    if (array[i] < min) {
-      min = array[i];
+void print_binary_str(std::string decimal_number) {
+    int num = stoi(decimal_number);
+    std::string binary_str("");
+    while (num > 0) {
+        binary_str.insert(0,1,(num % 2) + '0');
+        num = num / 2;
     }
-  }
-  return min;
+    std::cout << binary_str << std::endl;
 }

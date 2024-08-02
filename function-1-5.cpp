@@ -1,14 +1,10 @@
 #include <iostream>
 
-int count_evens(int number) {
-    if (number < 1) {
-        return 0;
-    }
-    int sum = 0;
-    for (int i = 1; i <= number; i++) {
-        if (i % 2 == 0) {
-            sum++;
+void print_summed(int array1[3][3],int array2[3][3]) {
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            std::cout << array1[i][j] + array2[i][j] << " ";
         }
+        std::cout << "\n";
     }
-    return sum;
 }

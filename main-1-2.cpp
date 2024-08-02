@@ -1,8 +1,18 @@
 #include <iostream>
 
-extern double array_mean(int array[], int n);
+extern int is_identity(int array[10][10]);
 
 int main() {
-    int array[3] = {1, 5, 4};
-    std::cout << array_mean(array, 3) << std::endl;
+    int arr[10][10];
+    for (int i = 0; i < 10; i++) {
+        for (int j = 0; j < 10; j++) {
+            if (i == j) {
+                arr[i][j] = 1;
+            } else {
+                arr[i][j] = 0;
+            }
+        }
+    }
+
+    std::cout << is_identity(arr) << std::endl;
 }
