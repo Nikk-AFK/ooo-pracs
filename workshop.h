@@ -6,8 +6,9 @@ void changeValue(double* ptr) {
 
 void printArray(double* arr, int size) {
     for (int i = 0; i < size; i++) {
-        std:: cout << arr[i] << "" << std::endl; 
+        std::cout << arr[i] << " "; 
     }
+    std::cout << std::endl;
 }
 
 double arrayMax(double* arr, int size) {
