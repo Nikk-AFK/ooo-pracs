@@ -1,8 +1,11 @@
 #include <iostream>
 
-extern int sum_diagonal(int array[4][4]);
+extern double arrayMin(double* array, int size);
 
 int main() {
-    int arr[4][4] = {{3, 4, 5, 6}, {4, 3, 2, 1}, {3, 5, 7, 4}, {5, 2, 1, 6}};
-    std::cout << sum_diagonal(arr) << std::endl;
+    double * array = new double[3];
+    array[0] = 2;
+    array[1] = 1.5;
+    array[2] = 1.75;
+    std::cout << arrayMin(array, 3);
 }

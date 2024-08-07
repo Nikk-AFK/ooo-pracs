@@ -1,8 +1,14 @@
 #include <iostream>
 
-extern int count_digits(int array[4][4]);
+extern double* duplicateArray(double* array, int size);
 
 int main() {
-    int arr[4][4] = {{3, 0, 5, 9}, {4, 7, 2, 1}, {3, 2, 7, 4}, {5, 2, 1, 8}};
-    count_digits(arr);
+    double * array = new double[3];
+    array[0] = 2;
+    array[1] = 1.5;
+    array[2] = 1.75;
+    double * ptr = duplicateArray(array, 3);
+    for (int i = 0; i < 3; i++) {
+        std::cout << ptr[i] << " ";
+    }
 }

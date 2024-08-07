@@ -1,18 +1,14 @@
 #include <iostream>
 
-extern int is_identity(int array[10][10]);
+extern void modifyArray(double* array, int size, double value);
 
 int main() {
-    int arr[10][10];
-    for (int i = 0; i < 10; i++) {
-        for (int j = 0; j < 10; j++) {
-            if (i == j) {
-                arr[i][j] = 1;
-            } else {
-                arr[i][j] = 0;
-            }
-        }
+    double * array = new double[3];
+    array[0] = 2;
+    array[1] = 1.5;
+    array[2] = 1.75;
+    modifyArray(array, 3, 3.5);
+    for (int i = 0; i < 3; i++) {
+        std::cout << array[i] << " ";
     }
-
-    std::cout << is_identity(arr) << std::endl;
 }
