@@ -28,7 +28,7 @@ int * reverseArray(int *numbers1,int length) {
     int * numbers2 = new int[length];
     for (int i = 0; i < length; i++) {
         numbers2[i] = numbers1[length-1-i];
-        std::cout << numbers2[i] << std::endl;
+        std::cout << numbers2[length-1-i] << std::endl;
     }
     return numbers2;
 }
