@@ -12,6 +12,5 @@ int main() {
     arr[i] = {"James Doe", 2};
     }
     PersonList field2 = deepCopyPersonList(field1);
-    std::cout << field2.people[1].name << " " << field2.people[1].age << std::endl;
 }
 
