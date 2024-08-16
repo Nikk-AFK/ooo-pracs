@@ -2,9 +2,10 @@
 #include "Person.h"
 
 PersonList deepCopyPersonList(PersonList pl) {
-    PersonList field1 = pl;
-    PersonList field2;
-    *field2.people = *field1.people;
-    field2.numPeople = field2.numPeople;
-    return field2;
+    Person * dc_arr = new Person[pl.numPeople];
+    PersonList dc = {dc_arr, pl.numPeople};
+    for (int i = 0; i < pl.numPeople; i++) {
+        dc_arr[i] = pl.people[i];
+    }
+    return dc;
 }

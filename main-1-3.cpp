@@ -4,13 +4,13 @@
 extern PersonList deepCopyPersonList(PersonList pl);
 
 int main() {
-    PersonList field1;
-    field1.numPeople = 3;
     Person * arr = new Person[3];
-    field1.people = arr;
+    PersonList list = {arr, 3};
     for (int i = 0; i < 3; i++) {
-    arr[i] = {"James Doe", 2};
+        arr[i] = {"Phrase", 5};
     }
-    PersonList field2 = deepCopyPersonList(field1);
+    PersonList dc = deepCopyPersonList(list);
+    std::cout << dc.numPeople << " " << dc.people[2].name << std::endl;
+    delete[] arr;
+    delete [] dc.people;
 }
-

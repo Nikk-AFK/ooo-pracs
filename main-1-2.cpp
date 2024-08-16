@@ -4,6 +4,7 @@
 extern PersonList createPersonList(int n);
 
 int main() {
-    PersonList field = createPersonList(3);
-        std::cout << field.people[1].name << " " << field.people[1].age << std::endl;
+    PersonList list = createPersonList(5);
+    std::cout << list.numPeople << " " << list.people[2].name << std::endl;
+    delete[] list.people;
 }
