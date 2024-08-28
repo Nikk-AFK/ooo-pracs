@@ -1,7 +1,7 @@
 #include <iostream>
-#include "Player.h"
-#include "Warrior.h"
-#include "Wizard.h"
+#include "player.h"
+#include "warrior.h"
+#include "wizard.h"
 
 Player::Player(std::string name, int health, int damage) : name(name), health(health), damage(damage) {}
 void Player::attack(Player * opponent, int damage) {

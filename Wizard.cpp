@@ -1,7 +1,7 @@
 #include <iostream>
-#include "Player.h"
-#include "Warrior.h"
-#include "Wizard.h"
+#include "player.h"
+#include "warrior.h"
+#include "wizard.h"
 
 Wizard::Wizard(std::string name, int health, int damage, int mana) : Player(name, health, damage), mana(mana) {}
 
