@@ -11,11 +11,11 @@ int main() {
         std::cout << "What type of vehicle? 0 is car, 1 bus, 2 motorbike: " << std::endl;
         std::cin >> buffer;
         if (buffer == 0) {
-            lot.parkVehicle(Car(i));
+            lot.parkVehicle(new Car(i));
         } else if (buffer == 1) {
-            lot.parkVehicle(Bus(i));
+            lot.parkVehicle(new Bus(i));
         } else if (buffer == 2) {
-            lot.parkVehicle(Motorbike(i));
+            lot.parkVehicle(new Motorbike(i));
         }
     }
 

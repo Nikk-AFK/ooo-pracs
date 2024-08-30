@@ -12,11 +12,11 @@ class ParkingLot {
     int count;
 
     public: 
-    Vehicle * vehicles;
+    Vehicle ** vehicles;
     ParkingLot(int max);
     ParkingLot();
     int getCount();
-    void parkVehicle(Vehicle obj);
+    void parkVehicle(Vehicle * obj);
     void unparkVehicle(int id);
 };
 
