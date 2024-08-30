@@ -2,6 +2,7 @@
 #define VEHICLE_H
 
 #include <iostream>
+#include <ctime>
 
 class Vehicle { 
     protected:
