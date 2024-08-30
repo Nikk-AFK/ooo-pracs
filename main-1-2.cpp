@@ -7,7 +7,7 @@
 int main() {
     int buffer = 0;
     ParkingLot lot(10);
-    for (int i = 0; i < 10; i++) {
+    for (int i = 0; i < 11; i++) {
         std::cout << "What type of vehicle? 0 is car, 1 bus, 2 motorbike: " << std::endl;
         std::cin >> buffer;
         if (buffer == 0) {
