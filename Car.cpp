@@ -6,5 +6,5 @@ Car::Car(int identification) : Vehicle(identification) {
 }
 
 int Car::getParkingDuration() {
-    return std::time(nullptr)-timeOfEntry;
+    return (std::time(nullptr)-timeOfEntry)*0.9;
 }

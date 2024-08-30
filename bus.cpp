@@ -6,5 +6,5 @@ Bus::Bus(int identification) : Vehicle(identification) {
 }
 
 int Bus::getParkingDuration() {
-    return std::time(nullptr)-timeOfEntry;
+    return (std::time(nullptr)-timeOfEntry)*0.75;
 }

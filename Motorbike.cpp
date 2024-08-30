@@ -6,5 +6,5 @@ Motorbike::Motorbike(int identification) : Vehicle(identification) {
 }
 
 int Motorbike::getParkingDuration() {
-    return std::time(nullptr)-timeOfEntry;
+    return (std::time(nullptr)-timeOfEntry)*0.85;
 }
