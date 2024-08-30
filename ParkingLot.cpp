@@ -24,7 +24,6 @@ void ParkingLot::unparkVehicle(int id) {
             vehicles[i] = vehicles[count - 1];  
             vehicles[count - 1] = nullptr;
             count--;
-            std::cout << "Vehicle removed" << std::endl;
             result = true;
             break;
         }
