@@ -1,25 +1,27 @@
-#include <iostream>
-#include "player.h"
-#include "wizard.h"
-#include "warrior.h"
+#include "vehicle.h"
+#include "car.h"
+#include "bus.h"
+#include "motorbike.h"
 
-using namespace std;
 int main() {
-//Wizard(name, health, damage, mana)
-Wizard wizard("Gandalf", 100, 20, 50);
-//Warrior(name, health, damage, weapon)
-Warrior warrior("Aragorn", 120, 25, "Sword");
-cout << "Let the battle begin!" << endl;
-while (wizard.getHealth() > 0 && warrior.getHealth() > 0) {
-wizard.castSpell(&warrior);
-if (warrior.getHealth() > 0) {
-warrior.swingWeapon(&wizard);
-}
-}
-if (wizard.getHealth() > 0) {
-cout << wizard.getName() << " wins!" << endl;
-} else {
-cout << warrior.getName() << " wins!" << endl;
-}
-return 0;
+    std::cout << "How many vehicles?" << std::endl;
+    int num = 0;
+    std::cin >> num;
+    int buffer = 0;
+    Vehicle * arr[num];
+    for (int i = 0; i < num; i++) {
+        std::cout << "What type of vehicle? 0 is car, 1 bus, 2 motorbike: " << std::endl;
+        std::cin >> buffer;
+        if (buffer == 0) {
+            arr[i] = new Car(i);
+        } else if (buffer == 1) {
+            arr[i] = new Bus(i);
+        } else if (buffer == 2) {
+            arr[i] = new Motorbike(i);
+        }
+    }
+
+    for (int i = 0; i < num; i++) {
+        std::cout << arr[i]->getParkingDuration() << std::endl;
+    } 
 }
