@@ -20,10 +20,13 @@ void ParkingLot::unparkVehicle(int id) {
     bool result = false;
     for (int i = 0; i < count; i++) {
         if (vehicles[i]->getID() == id) {
-            vehicles[i] = nullptr;
+            delete vehicles[i];
+            vehicles[i] = vehicles[count - 1];  
+            vehicles[count - 1] = nullptr;
             count--;
             std::cout << "Vehicle removed" << std::endl;
             result = true;
+            break;
         }
     }
     if (result == false) {
