@@ -4,9 +4,11 @@
 #include "AirCraft.h"
 
 class AirFleet {
+    private:
+    AirCraft **fleet;
+
     public:
     AirFleet();
-AirCraft **fleet;
 AirCraft **get_fleet();
 };
 
