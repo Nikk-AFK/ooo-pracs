@@ -3,8 +3,8 @@
 
 Fridge::Fridge() : Appliance(0), volume(100) {}
 Fridge::Fridge(int powerRating, double volume) : Appliance(powerRating), volume(volume) {}
-void Fridge::setVolume(double volume) {
-    volume = volume;
+void Fridge::setVolume(double vol) {
+    volume = vol;
 }
 double Fridge::getVolume() {
     return volume;
