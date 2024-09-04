@@ -1,5 +1,6 @@
 #include "Airplane.h"
 
+
     Airplane::Airplane(int w, int p) : AirCraft(w), numPassengers(p) {};
     int Airplane::get_numPassengers() {
         return numPassengers;
