@@ -9,22 +9,24 @@
     }
     void Helicopter::fly(int headwind, int minutes) {
         float fuel_usage;
+        float new_fuel;
         if (headwind >= 40) {
             if (get_weight() > 5670) {
-                fuel_usage = (0.4 + ((get_weight() - 5670)*(0.001))) * minutes;
+                new_fuel = get_fuel() - (0.4 * minutes) - ((get_weight() - 5670)*(0.001)*minutes);
             } else {
-                fuel_usage = (0.4 * minutes);
+                new_fuel = get_fuel() - (0.4 * minutes);
             }
         } else {
             if (get_weight() > 5670) {
-                fuel_usage = (0.2 + ((get_weight() - 5670)*(0.001))) * minutes;
+                new_fuel = get_fuel() - (0.2 * minutes) - ((get_weight() - 5670)*(0.001)*minutes);
+                std::cout << - (0.2 * minutes) - ((get_weight() - 5670)*(0.001)*minutes) << std::endl;
             } else {
-                fuel_usage = (0.2 * minutes);
+                new_fuel = get_fuel() - (0.2 * minutes);
             }
         }
-        if ((get_fuel() - fuel_usage) < 20) {
+        if (new_fuel < 20) {
         } else {
-            set_fuel((get_fuel() - fuel_usage));
+            set_fuel(new_fuel);
             set_numberOfFlights((get_numberOfFlights()) + 1);
         }
     }

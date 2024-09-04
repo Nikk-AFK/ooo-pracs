@@ -2,7 +2,7 @@
 #include "Helicopter.h"
 
 int main() {
-    Helicopter Copter(6190, "Chopper");
+    Helicopter Copter(5710, "Chopper");
     Copter.refuel();
     Copter.set_fuel(80);
     std::cout << "weight is now: " << Copter.get_weight() << std::endl;
