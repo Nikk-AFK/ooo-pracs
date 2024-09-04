@@ -1,6 +1,9 @@
 #include "Helicopter.h"
 
-    Helicopter::Helicopter(int w, std::string n) : AirCraft(w), name(n) {};
+    Helicopter::Helicopter(int w, std::string n) : AirCraft(w), name(n) {
+        set_fuel(100);
+        set_numberOfFlights(0);
+    };
     std::string Helicopter::get_name() {
         return name;
     }
@@ -23,7 +26,6 @@
             }
         }
         if ((get_fuel() - fuel_usage) < 20) {
-            std::cout << (get_fuel() - fuel_usage) << std::endl;
         } else {
             set_fuel((get_fuel() - fuel_usage));
             int num = get_numberOfFlights();
