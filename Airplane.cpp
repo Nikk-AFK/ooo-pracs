@@ -15,9 +15,9 @@
         float fuel_usage;
         float new_fuel;
         if (headwind >= 60) {
-                new_fuel = get_fuel() - (0.3 * minutes) - (numPassengers)*(0.001)*minutes;
-        } else {
                 new_fuel = get_fuel() - (0.5 * minutes) - (numPassengers)*(0.001)*minutes;
+        } else {
+                new_fuel = get_fuel() - (0.3 * minutes) - (numPassengers)*(0.001)*minutes;
         }
         if (new_fuel < 20) {
         } else {
