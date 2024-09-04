@@ -1,7 +1,9 @@
 #include "AirCraft.h"
 
 AirCraft::AirCraft() {};
-AirCraft::AirCraft(int w) : weight(w) {};
+AirCraft::AirCraft(int w) : weight(w) {
+    fuel = 100;
+};
 void AirCraft::refuel() {
     fuel = 100;
 }
