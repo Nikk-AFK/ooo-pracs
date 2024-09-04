@@ -4,7 +4,6 @@
 int main() {
     AirCraft plane(10);
     plane.set_fuel(53.54545);
-    std::cout << "fuel: " << float(plane.get_fuel()) << std::endl;
     plane.refuel();
     std::cout << "refueled. now fuel: " << plane.get_fuel() << std::endl;
     plane.fly(10, 5);
