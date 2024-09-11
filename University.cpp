@@ -4,8 +4,8 @@
 University::University(std::string n, std::string l) : name(n), location(l) {
     count = 0;
     capacity = 10;
-    Gradebook * gradebook = new Gradebook();
-    Course * courses = new Course[capacity];
+    gradebook = new Gradebook();
+    courses = new Course[capacity];
 
 }
 void University::addCourse(int id, std::string name) {
