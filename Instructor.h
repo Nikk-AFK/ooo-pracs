@@ -6,7 +6,7 @@
 
 class Instructor : public Person {
     public:
-    Instructor();
+    Instructor(std::string n);
 };
 
 #endif

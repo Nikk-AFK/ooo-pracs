@@ -10,7 +10,7 @@ class Student : public Person {
     int id;
 
     public:
-    Student(int identification);
+    Student(int identification, std::string n);
 };
 
 #endif

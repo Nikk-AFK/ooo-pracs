@@ -6,11 +6,13 @@
 
 class Gradebook {
     private:
-    Grade * grades;    
+    Grade * grades;  
+    int num;  
+    int count;
 
     public:
 
-    Gradebook(Grade grades);
+    Gradebook();
     void addGrade(int stud_id, int course_id, std::string assignment, int value);
 
 };

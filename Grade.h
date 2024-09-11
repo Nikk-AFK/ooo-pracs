@@ -6,10 +6,14 @@
 class Grade {
     private:
     int student_id;
+    int course_id;
+    int value;
+
     std::string assignment;
 
     public:
-    Grade(int id, std::string assign);
+    Grade(int s_id, int c_id, std::string assign, int value);
+    Grade();
       
 };
 

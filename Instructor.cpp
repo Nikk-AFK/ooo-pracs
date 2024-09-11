@@ -1,3 +1,3 @@
 #include "Instructor.h"
 
-Instructor::Instructor() {}
+Instructor::Instructor(std::string n) : Person(n) {}

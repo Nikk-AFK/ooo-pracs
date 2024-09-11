@@ -10,11 +10,16 @@ class University {
     std::string name;
     std::string location;
     Course * courses;
-    Gradebook * gradebooks;
+    Gradebook * gradebook;
+    int count;
+    int capacity;
 
     public:
-    University();
+    University(std::string n, std::string l);
     void addCourse(int id, std::string name);
+    Course * University::getCourses();
+    Gradebook * University::getGradebook();
+
 };
 
 #endif
