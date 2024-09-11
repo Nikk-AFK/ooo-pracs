@@ -17,8 +17,8 @@ class University {
     public:
     University(std::string n, std::string l);
     void addCourse(int id, std::string name);
-    Course * University::getCourses();
-    Gradebook * University::getGradebook();
+    Course * getCourses();
+    Gradebook * getGradebook();
 
 };
 
