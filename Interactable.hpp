@@ -6,12 +6,13 @@
 #include "GridItem.hpp"
 #include "Scientist.hpp"
 
+enum InteractableType {
+    GOAL,
+    EXPERIMENT
+};
+
 class Interactable : public GridItem {
     public:
-    enum InteractableType {
-        GOAL,
-        EXPERIMENT
-    };
 
     Interactable() : GridItem(0, 0, 0, 0) {
         countInter++;
