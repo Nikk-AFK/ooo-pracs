@@ -1,12 +1,13 @@
-#include "Utils.h"
 #include <iostream>
-
+#include <cmath>
+#include "GridItem.hpp"
+#include "Helper.hpp"
 int main() {
-    std::tuple<int, int> position1 = {5, 4};
-    std::tuple<int, int> position2 = {12, 15};
+    GridItem item1(4, 3, 2, 5);
+    GridItem item2(7, 9, 2, 5);
 
-    double dist = Utils::calculateDistance(position1, position2);
+    int dist = Helper::manhattanDistance(item1.getCoordinates(), item2.getCoordinates());
+    std::cout << "Manhattan distance is: " << dist << std::endl;
 
-    std::cout << "Distance is: " << dist << std::endl;
     return 0;
 }
