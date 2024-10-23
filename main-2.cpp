@@ -13,7 +13,6 @@ int main() {
     Experiment expe2(5, 5, 1, 1); 
     guy.move(1, 2);
     std::pair<int, int> coord = guy.getCoordinates();
-    std:: cout << "new coord: " << coord.first << coord.second << std::endl;
     expe2.interact(&guy); 
     expe2.interact(&guy); 
     guy.move(-4, -4);
