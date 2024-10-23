@@ -34,7 +34,9 @@ class GridItem {
         return count;
     }
 
-    virtual ~GridItem() {}
+    virtual ~GridItem() {
+        count--;
+    }
 
     protected:
     std::pair<int, int> position;
