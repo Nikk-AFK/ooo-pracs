@@ -6,6 +6,12 @@
 
 
 class GridItem {
+    protected:
+    std::pair<int, int> position;
+    int w;
+    int h;
+    static int count;
+    
     public:
     GridItem() : w(0), h(0), position({0, 0}) {
         count++;
@@ -38,11 +44,7 @@ class GridItem {
         count--;
     }
 
-    protected:
-    std::pair<int, int> position;
-    int w;
-    int h;
-    static int count;
+
 };
 
 int GridItem::count = 0;

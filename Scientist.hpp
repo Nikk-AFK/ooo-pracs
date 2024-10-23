@@ -5,6 +5,8 @@
 
 
 class Scientist : public GridItem {
+    protected:
+    int experimentCount;
     public: 
     Scientist() {}
     Scientist(int gridWidth, int gridHeight) : GridItem(0, 0, gridWidth, gridHeight), experimentCount(0) {}
@@ -26,8 +28,7 @@ class Scientist : public GridItem {
         }
     }
 
-    protected:
-    int experimentCount;
+
 };
 
 #endif
