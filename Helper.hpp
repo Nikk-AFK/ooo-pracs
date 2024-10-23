@@ -2,6 +2,7 @@
 #define HELPER_H
 
 #include <utility>
+#include <cmath>
 
 class Helper {
     public:
