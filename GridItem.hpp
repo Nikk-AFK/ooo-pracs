@@ -7,7 +7,7 @@
 
 class GridItem {
     public:
-    GridItem() : w(1), h(1), position({0, 0}) {
+    GridItem() : w(0), h(0), position({0, 0}) {
         count++;
     }
     GridItem(int x, int y, int width, int height) : position({x, y}), w(width), h(height) {
