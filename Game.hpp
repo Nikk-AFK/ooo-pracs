@@ -12,10 +12,16 @@
 #include "Goal.hpp"
 #include "Experiment.hpp"
 
+enum GameState {
+    WIN,
+    LOSE,
+    PLAYING
+};
 class Game {
     protected:
     int width;
     int height;
+    GameState state;
 
     public: 
     Game() {}
@@ -24,7 +30,24 @@ class Game {
         player.setCoordinates(0, 0);
         Goal goal(1, 1);
         goal.setCoordinates(width-1, height-1);
-        
+        state = GameState::PLAYING;
+    }
+
+    bool displayState() {
+        switch (state) {
+            case WIN:
+            std::cout << "You win!" << std::endl;
+            return true;
+            break;
+            case LOSE:
+            std::cout << "You lose :(" << std::endl;
+            return true;
+            break;
+            case PLAYING:
+            std::cout << "Game on" << std::endl;
+            return false;
+            break;
+        }
     }
 
 };
