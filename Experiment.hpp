@@ -23,7 +23,7 @@ class Experiment : public Interactable {
     }
 
     InteractableType getType() {
-        return EXPERIMENT;
+        return InteractableType::EXPERIMENT;
     }
         
 };

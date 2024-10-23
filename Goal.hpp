@@ -18,7 +18,7 @@ class Goal : public Interactable {
     }
 
     InteractableType getType() {
-        return GOAL;
+        return InteractableType::GOAL;
     }
         
 };
